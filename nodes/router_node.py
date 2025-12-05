@@ -39,6 +39,7 @@ def route_node(state, llm):
         - vector_rag
         - vector_rag2
         - both
+        - pdf_reader
 
         반드시 하나만 출력하세요.
         당신은 '질문 분류 전문가'입니다.
@@ -75,9 +76,16 @@ def route_node(state, llm):
    - **단, "최신", "뉴스", "현황" 등이 있으면 web_search 우선**
    예시: "PTTEP 자산 분석", "Block A-18 조사", "Vorwata, ID의 경제성 분석"
 
+6. "pdf_reader"
+   - PDF 파일이 업로드된 경우
+   - PDF 문서 분석 요청
+   - 업로드된 문서 내용 분석이 필요한 경우
+   - **PDF가 업로드되면 both 노드와 함께 실행됨**
+   예시: "이 PDF 분석해줘", "업로드한 문서 요약", "첨부 파일 검토"
+
     출력 형식:
     {{
-      "route": "simple_query" 또는 "web_search" 또는 "vector_rag" 또는 "vector_rag2" 또는 "both"
+      "route": "simple_query" 또는 "web_search" 또는 "vector_rag" 또는 "vector_rag2" 또는 "both" 또는 "pdf_reader"
     }}
 
     절대 다른 텍스트를 출력하지 마세요.

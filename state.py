@@ -24,6 +24,11 @@ class State(TypedDict):
     rag1_result: Optional[Dict[str, Any]]  # Economic Agent 상세 결과
     rag2_result: Optional[Dict[str, Any]]  # Production Agent 상세 결과
     
+    # PDF Reader 결과
+    pdf_path: Optional[str]                # PDF 파일 경로
+    pdf_result: Optional[str]              # PDF 분석 결과
+    pdf_content: Optional[str]             # PDF 추출 텍스트
+    
     # Integrator용 필드들
     subject: Optional[str]                 # 주제
     websearch: Optional[str]               # 웹 검색 결과
@@ -33,4 +38,5 @@ class State(TypedDict):
     messages: Optional[List[BaseMessage]]  # 메시지 리스트
     contents_word: Optional[str]           # 워드 문서 내용
     answer_word: Optional[str]             # 워드 생성 결과
+    word_file_path: Optional[str]          # 생성된 Word 파일 경로
 

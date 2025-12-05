@@ -51,4 +51,8 @@ Desktop.ini
 *.tmp
 *.bak
 
+# Upload files
+uploads/
+*.pdf
+
 
