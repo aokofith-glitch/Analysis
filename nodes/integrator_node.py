@@ -116,6 +116,7 @@ def integrator1(state, llm):
         report_sections.append("")
         
         final_report = "\n".join(report_sections)
+        
     else:
         # 결과가 없는 경우
         final_report = "분석 결과가 없습니다."
