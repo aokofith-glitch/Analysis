@@ -24,9 +24,9 @@ wheels/
 *.egg
 
 # Database files
-*.db
-*.sqlite
-*.sqlite3
+# *.db
+# *.sqlite
+# *.sqlite3
 
 # IDEs
 .vscode/
